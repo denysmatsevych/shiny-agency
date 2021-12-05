@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import './index.css';
 import Home from './pages/Home';
-import Survey from './pages/Survey/Survey';
+import Survey from './pages/Survey';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -14,6 +14,7 @@ ReactDOM.render(
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/survey" element={<Survey />} />
+                <Route path="/survey/:questionNumber" element={<Survey />} />
             </Routes>
         </Router>
     </React.StrictMode>,
