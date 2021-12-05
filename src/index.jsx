@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Error from './components/Error';
 import Header from './components/Header';
 import './index.css';
 import Home from './pages/Home';
@@ -13,8 +14,8 @@ ReactDOM.render(
             <Header />
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route path="/survey" element={<Survey />} />
                 <Route path="/survey/:questionNumber" element={<Survey />} />
+                <Route path="*" element={<Error />} />
             </Routes>
         </Router>
     </React.StrictMode>,
